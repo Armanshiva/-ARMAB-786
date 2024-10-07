@@ -2,8 +2,8 @@ module.exports.config = {
   name: "hi",
   version: "1.0.0",
   hasPermssion: 0,
-  credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
-  description: "hi sticker",
+  credits: "PREM BABU",
+  description: "hi gửi sticker",
   commandCategory: "QTV BOX",
   usages: "[text]",
   cooldowns: 5
@@ -14,7 +14,7 @@ module.exports.handleEvent = async ({ event, api, Users }) => {
     "hello",
     "hi",
     "hai",
-    "chào",
+    "hy",
     "chao",
     "hí",
     "híí",
@@ -48,14 +48,14 @@ module.exports.handleEvent = async ({ event, api, Users }) => {
     let moment = require("moment-timezone");
     let hours = moment.tz('Asia/Manila').format('HHmm');
     let session = (
-    hours > 0001 && hours <= 400 ? "bright morning" : 
-    hours > 401 && hours <= 700 ? "morning" :
-    hours > 701 && hours <= 1000 ? "shining" :
-    hours > 1001 && hours <= 1200 ? "lunch" : 
-    hours > 1201 && hours <= 1700 ? "afternoon" : 
-    hours > 1701 && hours <= 1800 ? "gloaming" : 
-    hours > 1801 && hours <= 2100 ? "evening" : 
-    hours > 2101 && hours <= 2400 ? "late night" : 
+    hours > 0001 && hours <= 400 ? "Happy Morning" : 
+    hours > 401 && hours <= 700 ? "Sweet Morning" :
+    hours > 701 && hours <= 1000 ? "Shining" :
+    hours > 1001 && hours <= 1200 ? "Lunch" : 
+    hours > 1201 && hours <= 1700 ? "Afternoon" : 
+    hours > 1701 && hours <= 1800 ? "Morning" : 
+    hours > 1801 && hours <= 2100 ? "Evening" : 
+    hours > 2101 && hours <= 2400 ? "Late Night" : 
     "error");
     let name = await Users.getNameUser(event.senderID);
     let mentions = [];
@@ -63,7 +63,7 @@ module.exports.handleEvent = async ({ event, api, Users }) => {
       tag: name,
       id: event.senderID
     })
-    let msg = {body: `Hi ${name}, have a good ${session}`, mentions}
+    let msg = {body: `Hi 🙋 ${name} 😗 Have a Good ${session} 🙂🤟`, mentions}
     api.sendMessage(msg, event.threadID, (e, info) => {
       setTimeout(() => {
         api.sendMessage({sticker: sticker}, event.threadID);
