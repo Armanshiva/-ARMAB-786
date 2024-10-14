@@ -2,7 +2,7 @@ module.exports.config = {
   name: "music",
   version: "2.0.4",
   hasPermission: 0,
-  credits: "FAIZ ANSARI",
+  credits: "SHANKAR SUMAN",
   description: "Play a song",
   commandCategory: "utility",
   usages: "[title]",
